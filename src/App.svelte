@@ -16,7 +16,7 @@
   />
 </svelte:head>
 
-<div>
+<div class="min-h-screen flex flex-col">
   <MainContent />
   <Footer />
 </div>

@@ -30,23 +30,27 @@
   ]
 </script>
 
-<main>
-  <div class="mt-20 px-5 ">
+<main class="flex-1 flex flex-col justify-center">
+  <div class="md:max-w-5xl md:mx-auto mt-20 px-5 md:grid md:grid-cols-3">
     {#each cars as car}
       <div
-        class={`${car.customBackgroundColor} p-10 text-white first:rounded-t-lg last:rounded-b-lg`}
+        class={`${car.customBackgroundColor} p-10 md:p-12 text-white first:rounded-t-lg md:first:rounded-none md:first:rounded-l-lg last:rounded-b-lg md:last:rounded-none md:last:rounded-r-lg`}
       >
-        <img src={car.iconPath} alt={car.type} />
-        <p class="font-big-shoulders-display uppercase text-4xl py-10">
-          {car.type}
-        </p>
-        <p class="font-lexend-deca text-cstm-neutral-transparent-white">
-          {car.description}
-        </p>
-        <button
-          class={`font-lexend-deca mt-8 bg-white hover:bg-transparent ${car.customTextColor} hover:text-cstm-neutral-light-gray hover:outline hover:outline-2 hover:outline-cstm-neutral-light-gray py-4 px-8 rounded-full`}
-          >Learn More</button
-        >
+        <div class="md:flex md:flex-col md:items-baseline md:justify-end">
+          <div>
+            <img src={car.iconPath} alt={car.type} />
+            <p class="font-big-shoulders-display uppercase text-4xl py-10">
+              {car.type}
+            </p>
+            <p class="font-lexend-deca text-cstm-neutral-transparent-white">
+              {car.description}
+            </p>
+          </div>
+          <button
+            class={`font-lexend-deca mt-8 md:mt-32 bg-white hover:bg-transparent ${car.customTextColor} hover:text-cstm-neutral-light-gray hover:outline hover:outline-2 hover:outline-cstm-neutral-light-gray py-4 px-8 rounded-full`}
+            >Learn More</button
+          >
+        </div>
       </div>
     {/each}
   </div>
