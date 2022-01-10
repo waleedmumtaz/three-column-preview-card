@@ -16,7 +16,7 @@
   />
 </svelte:head>
 
-<div class="min-h-screen flex flex-col">
+<div class="min-h-screen flex flex-col bg-cstm-neutral-light-gray">
   <MainContent />
   <Footer />
 </div>
